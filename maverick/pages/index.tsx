@@ -1,6 +1,7 @@
-import Wrapper from '@/components/Wrapper'
-import React from 'react'
-import Head from 'next/head'
+import Wrapper from "@/components/Wrapper";
+import React from "react";
+import Head from "next/head";
+import Car from "@/components/Car";
 
 export default function Home() {
 	return (
@@ -28,19 +29,20 @@ export default function Home() {
 						</p>
 
 						{/* Button */}
-						<div className='mt-8 flex gap-x-4 justify-center z-10'>
-							<button className='flex-none rounded-full bg-Red px-6 py-2.5 text-sm font-normal hover:bg-Black transition-all duration-300 text-white'>
+						<div className="mt-8 flex gap-x-4 justify-center z-10">
+							<button className="flex-none rounded-full bg-Red px-6 py-2.5 text-sm font-normal hover:bg-Black transition-all duration-300 text-white">
 								View Details
 							</button>
-							<button className='flex-none rounded-full bg-Red px-6 py-2.5 text-sm font-normal hover:bg-Black transition-all duration-300 text-white'>
+							<button className="flex-none rounded-full bg-Red px-6 py-2.5 text-sm font-normal hover:bg-Black transition-all duration-300 text-white">
 								Rent Now
 							</button>
 						</div>
 
-						<div>
-							
+						<div className="mt-20 w-full h-full">
+							<div className="w-full h-full flex justify-center">
+								<Car />
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</Wrapper>

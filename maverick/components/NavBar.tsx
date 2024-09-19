@@ -3,10 +3,38 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi"
+import { motion } from 'framer-motion' 
 
 export default function NavBar() {
 	const [showMenu,setShowMenu] = useState<boolean>(false)
 	const pathname = usePathname()
+
+	const  menuVariants = {
+		hidden: {
+			scale: 0
+		},
+		visible: {
+			scale: 40,
+			transition: {
+				type: "tween",
+				duration: 0.5
+			}
+		}
+	}
+
+	const navLinkVariants = {
+		hidden: {
+			display: "none",
+			opacity: 0
+		},
+		visible: {
+			opacity: 1,
+			y: -30,
+			transition: {
+				delay: 0.7
+			}
+		}
+	}
 
 	const isActive = (path: string) => (
 		pathname === path ? "text-Red" : "text-Black" 
@@ -44,15 +72,34 @@ export default function NavBar() {
 				</div>
 			</nav>
 
-			<div className="bg-WhiteGray fixed top-0 right-0 w-16 h-16 rounded-full"></div>
+			<motion.div 
+				variants={menuVariants}
+				initial="hidden"
+				animate={showMenu ? "visible": "hidden"}
+				className="bg-WhiteGray fixed top-0 right-0 w-16 h-16 rounded-full"
+			></motion.div>
 
-			<nav className="h-screen md:hidden flex flex-col justify-center">
+			<motion.nav
+				variants={navLinkVariants}
+				animate={showMenu ? "visible" : "hidden"}
+			 	className="h-screen md:hidden flex flex-col justify-center">
 				{navLinks.map((navLink) => (
-					<Link href={navLink.path} key={navLink.label} className={`px-3 py-2`}>
+					<Link
+						href={navLink.path}
+						key={navLink.label}
+						className={`px-3 py-2 flex justify-center text-1xl uppercase font-medium ${isActive(
+							navLink.path
+						)}`}
+						onClick={(prev) => setShowMenu(!prev)}
+					>
 						{navLink.label}
 					</Link>
 				))}
-			</nav>
+				<HiX
+					className="absolute text-Black top-11 right-5 w-6 h-6 cursor-pointer"
+					onClick={(prev) => setShowMenu(!prev)}
+				/>
+			</motion.nav>
 		</header>
 	);
 }

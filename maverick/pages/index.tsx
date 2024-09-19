@@ -2,6 +2,10 @@ import Wrapper from "@/components/Wrapper";
 import React from "react";
 import Head from "next/head";
 import Car from "@/components/Car";
+import Stack from "@/components/Stack";
+
+//animation
+import { motion } from "framer-motion";
 
 export default function Home() {
 	return (
@@ -10,8 +14,15 @@ export default function Home() {
 				<title>Maverick - Home</title>
 			</Head>
 			<Wrapper className="text-center flex flex-col justify-center">
-				<div className="h-full">
+				{/* Gradients Background */}
+				<div className="bg-[#FBE2E3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w=[68.75rem]"></div>
+
+				<div className="bg-[#DBD7FB] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-33rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+				<div className="w-full h-full">
 					<div>
+						<div className="mb-4 lg:mt-48 mt-28">
+							<Stack />
+						</div>
 						{/* Heading  */}
 						<h1 className="h1">
 							Book. Perfect. {""}

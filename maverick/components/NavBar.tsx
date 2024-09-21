@@ -3,11 +3,15 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi"
-import { motion } from 'framer-motion' 
+import { motion } from 'framer-motion'
+
+import { IoLogoGooglePlaystore, IoLogoSkype, IoMailOpen } from "react-icons/io5"
 
 export default function NavBar() {
 	const [showMenu,setShowMenu] = useState<boolean>(false)
 	const pathname = usePathname()
+
+	const socialIcons = "text-3xl px-2 bg-black text-white rounded-full cursor-pointer text-Black"
 
 	const  menuVariants = {
 		hidden: {
@@ -72,17 +76,18 @@ export default function NavBar() {
 				</div>
 			</nav>
 
-			<motion.div 
+			<motion.div
 				variants={menuVariants}
 				initial="hidden"
-				animate={showMenu ? "visible": "hidden"}
+				animate={showMenu ? "visible" : "hidden"}
 				className="bg-WhiteGray fixed top-0 right-0 w-16 h-16 rounded-full"
 			></motion.div>
 
 			<motion.nav
 				variants={navLinkVariants}
 				animate={showMenu ? "visible" : "hidden"}
-			 	className="h-screen md:hidden flex flex-col justify-center">
+				className="h-screen md:hidden flex flex-col justify-center"
+			>
 				{navLinks.map((navLink) => (
 					<Link
 						href={navLink.path}
@@ -95,6 +100,19 @@ export default function NavBar() {
 						{navLink.label}
 					</Link>
 				))}
+
+				<div className="mt-6 flex justify-center items-center flex-row gap-4">
+					<Link href={"https://www.googleplay.com"} target={"_blank"}>
+						<IoLogoGooglePlaystore className={socialIcons} />
+					</Link>
+					<Link href={"https://www.skype.com"} target={"_blank"}>
+						<IoLogoSkype className={socialIcons} />
+					</Link>
+					<Link href={"https://mail.google.com"} target={"_blank"}>
+						<IoMailOpen className={socialIcons} />
+					</Link>
+				</div>
+
 				<HiX
 					className="absolute text-Black top-11 right-5 w-6 h-6 cursor-pointer"
 					onClick={(prev) => setShowMenu(!prev)}

@@ -10,4 +10,27 @@ const navLinks: NavLink[] = [
 	{ path: "/contact", label: "Contact" }, 
 ];
 
-export { navLinks };
+const countUpItems: countUpItemsProps[] = [
+	{
+		id: 1,
+		number: 21,
+		text: "Years of Experience",
+	},
+	{
+		id: 2,
+		number: 157,
+		text: "Satisfied Customers",
+	},
+	{
+		id: 3,
+		number: 743,
+		text: "Design Items",
+	},
+	{
+		id: 4,
+		number: 112,
+		text: "Clients Served",
+	},
+]
+
+export { navLinks, countUpItems };

@@ -1,4 +1,12 @@
-import { NavLink, countUpItemsProps, ProjectProps } from "@/Types"; 
+import {
+	NavLink,
+	countUpItemsProps,
+	ProjectProps,
+	ServiceProps,
+} from "@/Types";
+
+//Services Logo
+import { BsFillTaxiFrontFill, BsBriefcaseFill, BsTelephoneInboundFill, BsStarFill, BsAirplaneFill, BsFillCarFrontFill, BsFillPinMapFill, BsFillSendCheckFill } from "react-icons/bs";
 
 const navLinks: NavLink[] = [
 	{ path: "/", label: "Home" },
@@ -78,4 +86,55 @@ const projects: ProjectProps[] = [
 	},
 ];
 
-export { navLinks, countUpItems, projects };
+const services: ServiceProps[] = [
+	{
+		id: 1,
+		title: "Car Rental with Driver",
+		icon: <BsFillTaxiFrontFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 2,
+		title: "Business Car Rental",
+		icon: <BsBriefcaseFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 3,
+		title: "Airport Transportation",
+		icon: <BsAirplaneFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 4,
+		title: "Chauffeur Side Services",
+		icon: <BsFillSendCheckFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 5,
+		title: "VIP Luxury Transportation",
+		icon: <BsStarFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 6,
+		title: "Private Transportation",
+		icon: <BsFillCarFrontFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 7,
+		title: "Roadside Assistance Service",
+		icon: <BsFillPinMapFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+	{
+		id: 8,
+		title: "Event Transportation",
+		icon: <BsTelephoneInboundFill />,
+		description: "Enhance your rental experience with additional options.",
+	},
+];
+
+export { navLinks, countUpItems, projects, services };

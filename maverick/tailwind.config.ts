@@ -14,7 +14,7 @@ const config: Config = {
 				Black: "#000000",
 				Orange: "#DB2D2E",
 				WhiteGray: "#BFA37C",
-				Blur: "F7F5F2",
+				Blur: "#F7F5F2",
       },
     },
 		screens: {

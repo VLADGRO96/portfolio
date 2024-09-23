@@ -38,7 +38,7 @@ const projects: ProjectProps[] = [
 		id: 1,
 		img: "/project1.jpg",
 		name: "Porshe Taycan Sport",
-		des: "Experience the future of driving. This all-electric sports car offers unparalleled performance, luxury, and sustainability. With its sleek design, powerful electric motors, and advanced technology, the Taycan Sport is the perfect choice for those seeking a thrilling and eco-friendly driving experience.",
+		des: "Experience the future of driving. This all-electric sports car offers unparalleled performance, luxury, and sustainability.",
 		detail: ["+ More Details"],
 	},
 	{
@@ -66,7 +66,7 @@ const projects: ProjectProps[] = [
 		id: 5,
 		img: "/project1.jpg",
 		name: "Porshe Taycan Sport",
-		des: "Experience the future of driving. This all-electric sports car offers unparalleled performance, luxury, and sustainability. With its sleek design, powerful electric motors, and advanced technology, the Taycan Sport is the perfect choice for those seeking a thrilling and eco-friendly driving experience.",
+		des: "Experience the future of driving. This all-electric sports car offers unparalleled performance, luxury, and sustainability.",
 		detail: ["+ More Details"],
 	},
 	{

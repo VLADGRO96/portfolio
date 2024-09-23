@@ -11,7 +11,6 @@ import { useInView } from 'react-intersection-observer';
 //Animation
 import { motion } from "framer-motion";
 import { smoothIn } from "@/animate";
-import { div } from 'framer-motion/client';
 
 export default function about() {
 	const { ref, inView } = useInView({

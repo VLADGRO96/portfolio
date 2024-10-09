@@ -35,11 +35,21 @@ type ServiceProps = {
 	description: string;
 }
 
+type Skills = {
+	name: string;
+	level: number; 
+};
+
+type SkillBarProps = {
+	skills: Skills[];
+};
+
 export {
 	WrapperProps,
 	NavLink,
 	CountUpProps,
 	countUpItemsProps,
 	ProjectProps,
-	ServiceProps
+	ServiceProps,
+	SkillBarProps
 };

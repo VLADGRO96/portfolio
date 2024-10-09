@@ -137,4 +137,11 @@ const services: ServiceProps[] = [
 	},
 ];
 
-export { navLinks, countUpItems, projects, services };
+const skills = [
+	{ name: 'Professional', level: 90 },
+	{ name: 'Available', level: 80 },
+	{ name: 'Comfortable', level: 95 },
+	{ name: 'International', level: 80 },
+]
+
+export { navLinks, countUpItems, projects, services, skills };

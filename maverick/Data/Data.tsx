@@ -144,4 +144,43 @@ const skills = [
 	{ name: 'International', level: 80 },
 ]
 
-export { navLinks, countUpItems, projects, services, skills };
+const gallery = [
+	{
+		id: 1,
+		name: "Lamborghini Urus",
+		image: "/7.jpg",
+		link: "",
+	},
+	{
+		id: 2,
+		name: "Bentley Continental",
+		image: "/8-1.jpg",
+		link: "",
+	},
+	{
+		id: 3,
+		name: "Rolls Royce Cullinan",
+		image: "/12.jpg",
+		link: "",
+	},
+	{
+		id: 4,
+		name: "Bugatti Mistral W16",
+		image: "/9-1.jpg",
+		link: "",
+	},
+	{
+		id: 5,
+		name: "Aston Martin DBX",
+		image: "/Aston Martin DBX.jpeg",
+		link: "",
+	},
+	{
+		id: 6,
+		name: "",
+		image: "/7.jpg",
+		link: "",
+	},
+];
+
+export { navLinks, countUpItems, projects, services, skills, gallery };

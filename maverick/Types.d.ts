@@ -44,6 +44,12 @@ type SkillBarProps = {
 	skills: Skills[];
 };
 
+type  GalleryProps = {
+	id: number;
+	name: string;
+	des: string; 
+}
+
 export {
 	WrapperProps,
 	NavLink,
